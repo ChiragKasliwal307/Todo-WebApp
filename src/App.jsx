@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { TodoProvider } from './Context/TodoContext'
 import TodoForm from './Components/TodoForm'
 import TodoItems from './Components/TodoItems'
+import DropArea from './Components/DropArea'
 
 
 
@@ -39,6 +40,7 @@ function App() {
                         {todos.map((todo)=>(
                           <div key={todo.id} className='w-full'>
                             <TodoItems todo={todo} setActiveTodo={setActiveTodo}/>
+                            <DropArea/>
                           </div>
                         ))}
                     </div>
