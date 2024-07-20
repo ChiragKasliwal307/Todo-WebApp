@@ -9,7 +9,6 @@ function TodoItems({ todo, setActiveTodo }) {
     const editTodo = () => {
         updateTodo(todo.id, { ...todo, todo: todoMsg })
         setIsTodoEditable(false)
-
     }
 
     const toggleCompleted = () => {
@@ -22,7 +21,7 @@ function TodoItems({ todo, setActiveTodo }) {
             draggable={isTodoEditable ? "false" : "true"}
             onDragStart={() => setActiveTodo(todo.id)}
             onDragEnd={() => setActiveTodo(null)}
-            className={`flex border border-black/10 rounded-lg px-3 py-1.5 gap-x-3 shadow-sm shadow-white/50 duration-300  text-black ${todo.completed ? "bg-[#c6e9a7]" : "bg-[#ccbed7]"
+            className={`flex border border-black/10 rounded-lg px-3 py-1.5 mb-3 gap-x-3 shadow-sm shadow-white/50 duration-300  text-black ${todo.completed ? "bg-[#c6e9a7]" : "bg-[#ccbed7]"
                 }`}
         >
             <input
@@ -65,3 +64,7 @@ function TodoItems({ todo, setActiveTodo }) {
 }
 
 export default TodoItems;
+
+
+
+
