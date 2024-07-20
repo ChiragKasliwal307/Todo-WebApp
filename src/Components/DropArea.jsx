@@ -6,7 +6,7 @@ function DropArea() {
         <section
             onDragEnter={() => setShowDrop(true)}
             onDragLeave={() => setShowDrop(false)}
-            className={showDrop ? "" : ""}
+            className={showDrop ? "block" : " hidden"}
         >
             Drop Here
         </section>
